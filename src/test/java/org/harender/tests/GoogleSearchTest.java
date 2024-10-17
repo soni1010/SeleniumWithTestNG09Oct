@@ -56,7 +56,7 @@ public class GoogleSearchTest {
 
     @Test
     public void testGoogleSearch2() throws InterruptedException {
-        test = extent.createTest("New Shree Hari jewellers Charkhi Dadri Haryana Search on Google Test");
+        test = extent.createTest("New Shree Hari Jewellers Charkhi Dadri Haryana Search on Google Test");
         test.info("Navigating to Google");
 
         driver.get("https://www.google.com");
