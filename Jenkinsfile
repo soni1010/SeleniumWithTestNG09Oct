@@ -7,11 +7,14 @@ pipeline {
                 checkout scm // This will clone the repository
             }
         }
-        stage('Test Maven Command') {
+        stage('Build') {
             steps {
-                sh 'mvn -v' // Check Maven version to ensure it's set up
-                sh 'mvn clean install' // Try building the project
-                sh 'mvn test' // Try running tests
+                bat 'mvn clean install' // Use 'bat' for Windows
+            }
+        }
+        stage('Run Tests') {
+            steps {
+                bat 'mvn test' // Use 'bat' for Windows
             }
         }
     }
